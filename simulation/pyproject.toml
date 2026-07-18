@@ -1,0 +1,9 @@
+[project]
+name = "nomopoiesis-sim"
+version = "0.1.0"
+description = "Deterministic demonstrations for Nomopoiesis: the direct-vs-niche-mediated selection decomposition with a sign reversal, the niche-response kernel and its persistence threshold for costly construction, nomopoietic gain distinguishing a state-edited law from an externally forced one, and a replicator game whose payoff matrix is rewritten by play"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "matplotlib>=3.8",
+]

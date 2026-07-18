@@ -1,0 +1,50 @@
+{
+  "note": "Illustrative closed models instantiating the paper's definitions; not fit to data. Deterministic.",
+  "selection_decomposition": {
+    "rho": 0.8,
+    "kappa": 1.0,
+    "cost": 0.5,
+    "benefit": 1.2,
+    "theta": 0.6,
+    "e_star": 3.0,
+    "de_star_dtheta": 5.0,
+    "direct_gradient": -0.6,
+    "niche_mediated_gradient": 6.0,
+    "total_gradient": 5.4,
+    "finite_difference_total": 5.4,
+    "analytic_matches_numeric": true,
+    "sign_reversal": true
+  },
+  "persistence_threshold": {
+    "beta": 0.9,
+    "association_r": 0.8,
+    "cost": 1.4,
+    "kmax_truncation": 400,
+    "closed_form_matches_truncated_sum": true,
+    "critical_persistence": 0.677357,
+    "net_selection_at_sr_0.3": -0.468888,
+    "net_selection_at_sr_0.9": 0.595504
+  },
+  "nomopoietic_gain": {
+    "horizon": 40,
+    "alpha": 0.5,
+    "law_coupling_g": 0.05,
+    "nudge": 0.5,
+    "gain_genuine_k10": 0.322259,
+    "gain_genuine_k40": 4.533406,
+    "gain_forced_k10": 0.001953,
+    "gain_forced_k40": 0.0,
+    "genuine_grows": true,
+    "forced_decays": true
+  },
+  "game_rewritten": {
+    "dt": 0.02,
+    "steps": 60000,
+    "env_feedback_eps": 0.6,
+    "coupled_coop_mean": 0.504291,
+    "coupled_coop_amplitude": 0.945525,
+    "coupled_persistent_oscillation": true,
+    "fixed_game_low_env_fixation": 0.0,
+    "fixed_game_high_env_fixation": 1.0
+  }
+}
