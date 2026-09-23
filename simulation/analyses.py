@@ -169,12 +169,29 @@ def analysis_persistence_threshold() -> dict:
     else:
         sr_crit = float("nan")
 
+    # The value above is a linear interpolation between two points of a 181-point
+    # grid. Refine it by bisection on the closed-form net selection (prose audit,
+    # 2026-09-23); the closed form is monotone in the spectral radius here.
+    def net_closed(sr):
+        return -cost + _kernel_value_closed(R_of(sr), B, q, beta, r)
+    lo, hi = float(persistences[crossings[0]]), float(persistences[crossings[0] + 1])
+    for _ in range(100):
+        mid = 0.5 * (lo + hi)
+        if np.sign(net_closed(mid)) == np.sign(net_closed(lo)):
+            lo = mid
+        else:
+            hi = mid
+    sr_crit_exact = 0.5 * (lo + hi)
+    assert abs(net_closed(sr_crit_exact)) < 1e-9
+    assert abs(sr_crit_exact - sr_crit) < (persistences[1] - persistences[0])
+
     R_lo, R_hi = R_of(0.3), R_of(0.9)
     return {
         "beta": beta, "association_r": r, "cost": cost,
         "kmax_truncation": kmax,
         "closed_form_matches_truncated_sum": bool(closed_ok),
         "critical_persistence": round(sr_crit, 6),
+        "critical_persistence_exact": round(sr_crit_exact, 9),
         "net_selection_at_sr_0.3": round(-cost + _kernel_value_closed(R_lo, B, q, beta, r), 6),
         "net_selection_at_sr_0.9": round(-cost + _kernel_value_closed(R_hi, B, q, beta, r), 6),
         "_persistences": persistences.tolist(),
@@ -314,6 +331,29 @@ def analysis_game_rewritten() -> dict:
 
     tail = slice(T // 2, T)
     amp = float(ps[tail].max() - ps[tail].min())
+
+    # The coupled system has a conserved quantity. In logit coordinates
+    # u = logit p, v = logit n: du/dt = 2n - 1 and
+    # dv/dt = eps (0.5 - p), so H = eps*(ln(1+e^u) - u/2) + (2 ln(1+e^v) - v) is
+    # constant along orbits. The oscillation is therefore a neutral cycle whose
+    # amplitude is set by the initial condition (prose audit, 2026-09-23).
+    def H(pp, nn):
+        u = np.log(pp / (1 - pp)); v = np.log(nn / (1 - nn))
+        return eps * (np.log1p(np.exp(u)) - u / 2) + (2 * np.log1p(np.exp(v)) - v)
+    H0 = H(p0, n0)
+    Hs = H(ps, ns)
+    H_drift = float(np.max(np.abs(Hs - H0)) / abs(H0))
+    assert H_drift < 1e-3, "the coupled game must conserve H to integration accuracy"
+    # a second initial condition closer to the centre gives a smaller cycle
+    p, n = 0.5, 0.65
+    ps2 = []
+    for _ in range(T):
+        p, n = rk4(p, n)
+        ps2.append(p)
+    ps2 = np.array(ps2)
+    amp2 = float(ps2[tail].max() - ps2[tail].min())
+    # At the frozen environment n = 0.5 the cooperator's advantage 2(n - 0.5) is
+    # zero, so play is neutral there and does not fixate.
     return {
         "dt": dt, "steps": T, "env_feedback_eps": eps,
         "coupled_coop_mean": round(float(ps[tail].mean()), 6),
@@ -321,6 +361,9 @@ def analysis_game_rewritten() -> dict:
         "coupled_persistent_oscillation": bool(amp > 0.1),
         "fixed_game_low_env_fixation": round(fixate(0.2), 6),
         "fixed_game_high_env_fixation": round(fixate(0.8), 6),
+        "fixed_game_neutral_env_0.5_final_p": round(fixate(0.5), 6),
+        "conserved_quantity_H_max_relative_drift": float(f"{H_drift:.3g}"),
+        "coupled_coop_amplitude_from_n0_0.65": round(amp2, 6),
         "_p": ps[::40].tolist(), "_n": ns[::40].tolist(),
     }
 

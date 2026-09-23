@@ -1,0 +1,19 @@
+{
+  "pdf_sha256": "5a586f72268a57e98b371bca4a8d976d4c0db59f46849cb9ad64b191be7720e8",
+  "page_count": 11,
+  "pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "all_pages_inspected": true,
+  "notes": "All 11 pages inspected after the prose revision; title page, abstract, ten numbered sections, Reproducibility and the 20-entry bibliography set cleanly. All three figures were regenerated with descriptive titles; the Figure 2 legend and annotation, which overlapped the curves, were moved, and a spurious vertical segment at k = 0 (a zero separation on a log axis) was removed by starting the plot at k = 1; the Figure 3 legend, which overlapped the fixation line at 1, was moved into a row above the data; the rebuilt pages were re-inspected. No overfull lines, missing glyphs or orphaned headings. Metadata-only rebuild: the web blurb in metadata.yaml, a hashed build input, changed, so the PDF was re-rendered (bcb3cb5698de to 5a586f72268a); the rendered text is byte-for-byte identical and no page was re-inspected."
+}

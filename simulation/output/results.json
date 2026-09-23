@@ -22,6 +22,7 @@
     "kmax_truncation": 400,
     "closed_form_matches_truncated_sum": true,
     "critical_persistence": 0.677357,
+    "critical_persistence_exact": 0.677365194,
     "net_selection_at_sr_0.3": -0.468888,
     "net_selection_at_sr_0.9": 0.595504
   },
@@ -45,6 +46,9 @@
     "coupled_coop_amplitude": 0.945525,
     "coupled_persistent_oscillation": true,
     "fixed_game_low_env_fixation": 0.0,
-    "fixed_game_high_env_fixation": 1.0
+    "fixed_game_high_env_fixation": 1.0,
+    "fixed_game_neutral_env_0.5_final_p": 0.5,
+    "conserved_quantity_H_max_relative_drift": 3.02e-11,
+    "coupled_coop_amplitude_from_n0_0.65": 0.519375
   }
 }

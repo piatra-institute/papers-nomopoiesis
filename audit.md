@@ -3,6 +3,17 @@
 Dated log of editorial passes and verification runs. Newest first.
 See the workspace docs (run `papers docs`): writing-pipeline.md §7 and refresh-pipeline.md.
 
+## 2026-09-23 — prose revision
+
+Prose revision against the house standard, with a grid and number audit of the simulation.
+  - Headings: Abstract; 1. Introduction; 2. The causal criterion for rule editing; 3. Relation to an enlarged state space; 4. Niche construction as ecological nomopoiesis; 5. Direct and niche-mediated selection; 6. Four minimal models; 7. Cost, composition and scale; 8. Related concepts; 9. Limitations; 10. Conclusion; Reproducibility.
+  - Tic counts before -> after: 'rather than' 13 -> 0; 'not X but Y' 3 -> 0; 'this paper' 1 -> 0; 'worth' 1 -> 0; 'merely/simply' 2 -> 0; 'exactly/precisely' 3 -> 2 (literal). Abstract ~440 -> 261 words.
+  - Grid audit: the critical persistence (0.677357) was a linear interpolation between two points of a 181-point grid. analyses.py now refines it by bisection on the closed-form net selection (critical_persistence_exact = 0.677365194) and asserts that it lies within one grid step of the interpolated value. The reported 0.68 is unchanged; the text now gives the refined value.
+  - Correction 1 (overstatement): the text said every frozen game fixates at all-defect or all-cooperate. The cooperator's advantage is 2(n - 0.5), so at the frozen environment n = 0.5 play is neutral and does not fixate (new field fixed_game_neutral_env_0.5_final_p = 0.5). Abstract, results text and Figure 3 caption now say frozen games with n != 0.5 fixate.
+  - Correction 2 (omission): the coupled game conserves H = eps*(ln(1+e^u) - u/2) + (2 ln(1+e^v) - v) in logit coordinates u = logit p, v = logit n, so the oscillation is a neutral cycle whose amplitude is set by the initial condition. analyses.py now computes the relative drift of H along the orbit (3.02e-11, asserted < 1e-3) and the amplitude from a second initial condition (0.519375 from (0.5, 0.65) vs 0.945525 from (0.5, 0.85)); the text reports both and states the structural fragility in Limitations.
+  - All other prose numbers checked against results.json (-0.6, +6.0, +5.4, -0.47, +0.60, 4.5, below 1e-11, 0.95, 0.50); no further discrepancies. results.json changed only by the added fields.
+  - Figures: slogan titles replaced by descriptive ones; overlapping legends moved; log-scale artifact removed. README regenerated.
+
 ## 2026-07-18 — first draft through publish
 
 Scope: authored the paper end to end from the seed conversation in `chats/chat.md` (a ChatGPT exchange that first asked for a "mathematics of niche construction" and then coined the term "nomopoiesis"), through the full pipeline to a built and web-synced PDF with an accompanying simulation.
