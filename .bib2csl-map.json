@@ -1,0 +1,219 @@
+[
+ {
+  "id": "aubin1991",
+  "families": [
+   "Aubin"
+  ],
+  "authors_text": "Aubin, J.-P.",
+  "year": "1991",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "constant2018",
+  "families": [
+   "Constant",
+   "Ramstead",
+   "Veissière",
+   "Campbell",
+   "Friston"
+  ],
+  "authors_text": "Constant, A., Ramstead, M. J. D., Veissière, S. P. L., Campbell, J. O., & Friston, K. J.",
+  "year": "2018",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "dawkins1982",
+  "families": [
+   "Dawkins"
+  ],
+  "authors_text": "Dawkins, R.",
+  "year": "1982",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "geritz1998",
+  "families": [
+   "Geritz",
+   "Kisdi",
+   "Meszéna",
+   "Metz"
+  ],
+  "authors_text": "Geritz, S. A. H., Kisdi, É., Meszéna, G., & Metz, J. A. J.",
+  "year": "1998",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "ghani2018",
+  "families": [
+   "Ghani",
+   "Hedges",
+   "Winschel",
+   "Zahn"
+  ],
+  "authors_text": "Ghani, N., Hedges, J., Winschel, V., & Zahn, P.",
+  "year": "2018",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "gross2008",
+  "families": [
+   "Gross",
+   "Blasius"
+  ],
+  "authors_text": "Gross, T., & Blasius, B.",
+  "year": "2008",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "kerferd1981",
+  "families": [
+   "Kerferd"
+  ],
+  "authors_text": "Kerferd, G. B.",
+  "year": "1981",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "laio2002",
+  "families": [
+   "Laio",
+   "Parrinello"
+  ],
+  "authors_text": "Laio, A., & Parrinello, M.",
+  "year": "2002",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "laland1999",
+  "families": [
+   "Laland",
+   "Odling-Smee",
+   "Feldman"
+  ],
+  "authors_text": "Laland, K. N., Odling-Smee, F. J., & Feldman, M. W.",
+  "year": "1999",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "lee2022",
+  "families": [
+   "Lee",
+   "Flack",
+   "Krakauer"
+  ],
+  "authors_text": "Lee, E. D., Flack, J. C., & Krakauer, D. C.",
+  "year": "2022",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "lehmann2008",
+  "families": [
+   "Lehmann"
+  ],
+  "authors_text": "Lehmann, L.",
+  "year": "2008",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "maturana1980",
+  "families": [
+   "Maturana",
+   "Varela"
+  ],
+  "authors_text": "Maturana, H. R., & Varela, F. J.",
+  "year": "1980",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "metz1992",
+  "families": [
+   "Metz",
+   "Nisbet",
+   "Geritz"
+  ],
+  "authors_text": "Metz, J. A. J., Nisbet, R. M., & Geritz, S. A. H.",
+  "year": "1992",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "moulay2005",
+  "families": [
+   "Moulay",
+   "Baguelin"
+  ],
+  "authors_text": "Moulay, E., & Baguelin, M.",
+  "year": "2005",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "odlingsmee2003",
+  "families": [
+   "Odling-Smee",
+   "Laland",
+   "Feldman"
+  ],
+  "authors_text": "Odling-Smee, F. J., Laland, K. N., & Feldman, M. W.",
+  "year": "2003",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "su2019",
+  "families": [
+   "Su",
+   "McAvoy",
+   "Wang",
+   "Nowak"
+  ],
+  "authors_text": "Su, Q., McAvoy, A., Wang, L., & Nowak, M. A.",
+  "year": "2019",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "todorov2009",
+  "families": [
+   "Todorov"
+  ],
+  "authors_text": "Todorov, E.",
+  "year": "2009",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "weitz2016",
+  "families": [
+   "Weitz",
+   "Eksin",
+   "Paarporn",
+   "Brown",
+   "Ratcliff"
+  ],
+  "authors_text": "Weitz, J. S., Eksin, C., Paarporn, K., Brown, S. P., & Ratcliff, W. C.",
+  "year": "2016",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "wilson1975",
+  "families": [
+   "Wilson"
+  ],
+  "authors_text": "Wilson, K. G.",
+  "year": "1975",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "wong2023",
+  "families": [
+   "Wong",
+   "Cleland",
+   "Arend",
+   "Bartlett",
+   "Cleaves",
+   "Demarest",
+   "Prabhu",
+   "Lunine",
+   "Hazen"
+  ],
+  "authors_text": "Wong, M. L., Cleland, C. E., Arend, D., Bartlett, S., Cleaves, H. J., Demarest, H., Prabhu, A., Lunine, J. I., & Hazen, R. M.",
+  "year": "2023",
+  "status": "VERIFIED-CROSSREF"
+ }
+]

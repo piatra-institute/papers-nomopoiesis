@@ -14,7 +14,7 @@ Many systems in biology and society alter the rules that govern their own dynami
 
 An autonomous dynamical system $z_{t+1} = F(z_t)$ consists of a state and a fixed rule for advancing it. The rule lies outside the state and does not change while the state moves. Much of dynamical systems theory assumes this form, because it is the form under which trajectories and attractors are well defined. It does not fit a beaver.
 
-A beaver in a valley is a state in an environment, and the two evolve reciprocally. The niche-construction literature has modelled this for two decades as coupled organism and environment, $x_{t+1} = F(x_t, e_t)$ and $e_{t+1} = G(e_t, x_t)$ (Odling-Smee, Laland, & Feldman, 2003), so that the environment which advances the organism is itself advanced by the organism. A further step recognizes that the organism edits the rule under which its own future variables move, in addition to an environmental variable. Let $\lambda_t$ collect the effective law of the local world: the environmental dynamics, the interaction topology, the feasible actions, the transport costs and boundaries, the payoff or fitness map, and the list of state variables that exist at all. The system is then
+A beaver in a valley is a state in an environment, and the two evolve reciprocally. The niche-construction literature has modelled this for two decades as coupled organism and environment, $x_{t+1} = F(x_t, e_t)$ and $e_{t+1} = G(e_t, x_t)$ [@odlingsmee2003], so that the environment which advances the organism is itself advanced by the organism. A further step recognizes that the organism edits the rule under which its own future variables move, in addition to an environmental variable. Let $\lambda_t$ collect the effective law of the local world: the environmental dynamics, the interaction topology, the feasible actions, the transport costs and boundaries, the payoff or fitness map, and the list of state variables that exist at all. The system is then
 
 $$
 x_{t+1} = F_{\lambda_t}(x_t), \qquad \lambda_{t+1} = \mathcal{N}(\lambda_t, x_t).
@@ -22,7 +22,7 @@ $$
 
 The first equation describes change under a law and the second change of the law, performed by the operator $\mathcal{N}$. We call the operator, and the process it runs, nomopoiesis. The word joins nomos, which across Greek usage spans law, rule, custom and established order, to poiesis, making or bringing into being. The adjective nomopoietic appears occasionally in legal theory for rule-instituting procedures; here it denotes a property of dynamical systems.
 
-The term refers to a specific contrast. Greek thought set physis, nature and its spontaneous constitution, against nomos, the conventions and laws a community lays down, and the antithesis was a live controversy among the sophists (Kerferd, 1981). A niche constructor operates at the junction of the two. It leaves physis unchanged: the beaver's dam obeys the same hydrodynamics as the undammed stream. The dam changes the local nomos, the effective boundary conditions, retention times, transport costs and species interactions under which life in the valley proceeds. In this sense niche construction is ecological nomopoiesis: organisms write local law within fixed physical law.
+The term refers to a specific contrast. Greek thought set physis, nature and its spontaneous constitution, against nomos, the conventions and laws a community lays down, and the antithesis was a live controversy among the sophists [@kerferd1981]. A niche constructor operates at the junction of the two. It leaves physis unchanged: the beaver's dam obeys the same hydrodynamics as the undammed stream. The dam changes the local nomos, the effective boundary conditions, retention times, transport costs and species interactions under which life in the valley proceeds. In this sense niche construction is ecological nomopoiesis: organisms write local law within fixed physical law.
 
 ## 2. The causal criterion for rule editing
 
@@ -34,7 +34,7 @@ $$
 
 so that the state's history writes the law its future obeys. The organism must do something now that changes a future rule, and the changed rule must affect what the organism does later. When the arrow from $x_t$ to $\lambda_{t+1}$ is absent, the law is externally driven and the system is an ordinary nonautonomous system.
 
-The criterion excludes three overclaims, each with a counterpart in the niche-construction literature. A change in the environment that no future state reads is a trace and does not count as construction, because the loop must return to the organism. A statistical association between what the organism did and what the environment later looked like does not establish construction if an unobserved common cause produced both; the appropriate quantity is a path-specific causal effect through the environmental mediator, ideally measured under intervention (Lee, Flack, & Krakauer, 2022). A change with no consequence for viability or reproduction is not evolutionarily significant construction however large it is, because the relevant currency is lineage growth. Fitness is accordingly defined as the long-run invasion growth rate of a rare type in the environment set by a resident, a lineage-growth quantity with no implication that organisms maximize a utility (Metz, Nisbet, & Geritz, 1992).
+The criterion excludes three overclaims, each with a counterpart in the niche-construction literature. A change in the environment that no future state reads is a trace and does not count as construction, because the loop must return to the organism. A statistical association between what the organism did and what the environment later looked like does not establish construction if an unobserved common cause produced both; the appropriate quantity is a path-specific causal effect through the environmental mediator, ideally measured under intervention [@lee2022]. A change with no consequence for viability or reproduction is not evolutionarily significant construction however large it is, because the relevant currency is lineage growth. Fitness is accordingly defined as the long-run invasion growth rate of a rare type in the environment set by a resident, a lineage-growth quantity with no implication that organisms maximize a utility [@metz1992].
 
 ## 3. Relation to an enlarged state space
 
@@ -54,9 +54,9 @@ $$
 (x_t, \lambda_t) \longrightarrow (x_{t+1}, \lambda_{t+1}), \qquad x_t \in X_{\lambda_t},\ x_{t+1} \in X_{\lambda_{t+1}},\ X_{\lambda_t} \neq X_{\lambda_{t+1}},
 $$
 
-maps between different spaces. A fixed enlarged $X \times \Lambda$ can still contain such transitions if $X$ is taken large enough to hold every $X_{\lambda}$ at once, at the price of a state space specified in advance to contain possibilities that the model treats as produced during the dynamics. The nearest prior term, the meta-dynamical adaptive system, was introduced for the case in which a higher level modifies lower-level dynamics and the state-space dimension can change (Moulay & Baguelin, 2005). Nomopoiesis names the process and adds the causal and typed reading that prevents its collapse into a flat system.
+maps between different spaces. A fixed enlarged $X \times \Lambda$ can still contain such transitions if $X$ is taken large enough to hold every $X_{\lambda}$ at once, at the price of a state space specified in advance to contain possibilities that the model treats as produced during the dynamics. The nearest prior term, the meta-dynamical adaptive system, was introduced for the case in which a higher level modifies lower-level dynamics and the state-space dimension can change [@moulay2005]. Nomopoiesis names the process and adds the causal and typed reading that prevents its collapse into a flat system.
 
-The cases can be ordered by what is rewritten. Parametric nomopoiesis (depth one) leaves the form of $F$ fixed and moves its parameters, as when organisms shift a temperature or a resource density. Structural nomopoiesis (depth two) keeps the state space and changes the geometry, boundary conditions, constraints or interaction graph that define $F$, as a trail changes a cost metric or a dam changes a boundary. Generative nomopoiesis (depth three) changes the state space or the action alphabet, as a new symbiosis, signalling channel or technology adds a variable that did not previously exist. The three depths are progressively harder to flatten and to formalize. At depth three, evolution changes the set of problems a lineage faces in addition to solving problems within a fixed set; recent work on functional information attempts to quantify this expansion of possibility under selection for function (Wong et al., 2023).
+The cases can be ordered by what is rewritten. Parametric nomopoiesis (depth one) leaves the form of $F$ fixed and moves its parameters, as when organisms shift a temperature or a resource density. Structural nomopoiesis (depth two) keeps the state space and changes the geometry, boundary conditions, constraints or interaction graph that define $F$, as a trail changes a cost metric or a dam changes a boundary. Generative nomopoiesis (depth three) changes the state space or the action alphabet, as a new symbiosis, signalling channel or technology adds a variable that did not previously exist. The three depths are progressively harder to flatten and to formalize. At depth three, evolution changes the set of problems a lineage faces in addition to solving problems within a fixed set; recent work on functional information attempts to quantify this expansion of possibility under selection for function [@wong2023].
 
 ## 4. Niche construction as ecological nomopoiesis
 
@@ -66,15 +66,15 @@ $$
 \mu_{t+1} = \mu_t P_t, \qquad P_{t+1} = \mathcal{N}(P_t, \mu_t, \pi_\theta).
 $$
 
-The population changes both which states are common and the operator that will determine which states are common next. Selection acts on constructor policies through their long-run invasion fitness in the environment a resident policy generates, and the adaptive-dynamics gradient of that fitness gives the direction of evolution (Geritz, Kisdi, Meszéna, & Metz, 1998). That a constructed environment feeds back into selection, fixing otherwise deleterious alleles and creating or removing polymorphisms, is the founding formal result of niche-construction theory (Laland, Odling-Smee, & Feldman, 1999), and the reach of a constructor's effect beyond its own body is the extended phenotype (Dawkins, 1982).
+The population changes both which states are common and the operator that will determine which states are common next. Selection acts on constructor policies through their long-run invasion fitness in the environment a resident policy generates, and the adaptive-dynamics gradient of that fitness gives the direction of evolution [@geritz1998]. That a constructed environment feeds back into selection, fixing otherwise deleterious alleles and creating or removing polymorphisms, is the founding formal result of niche-construction theory [@laland1999], and the reach of a constructor's effect beyond its own body is the extended phenotype [@dawkins1982].
 
-The niche can be defined through viability, which avoids assuming that organisms maximize anything. Let $z = (x,e)$ be the joint organism-environment state and $K$ the set of viable states. The viability kernel is the set of initial conditions from which some admissible policy keeps the trajectory in $K$ for all future time (Aubin, 1991),
+The niche can be defined through viability, which avoids assuming that organisms maximize anything. Let $z = (x,e)$ be the joint organism-environment state and $K$ the set of viable states. The viability kernel is the set of initial conditions from which some admissible policy keeps the trajectory in $K$ for all future time [@aubin1991],
 
 $$
 \operatorname{Viab}(K) = \{\, z_0 : \exists\, u(\cdot)\ \text{with}\ z_t \in K\ \text{for all}\ t \geq 0 \,\}.
 $$
 
-Construction is then the organism-induced enlargement, displacement or stabilization of this kernel, and the usual descriptors become geometric: niche breadth is the size of the kernel, resilience is the distance from the current state to its boundary, and construction efficiency is kernel gain per unit work. No utility function is posited, and selection can install mechanistic policies that keep a lineage viable without foresight. When the edited object is an interaction graph, the same picture applies to adaptive networks, in which node states and topology coevolve and adding or cutting an edge creates or destroys a feasible transition (Gross & Blasius, 2008).
+Construction is then the organism-induced enlargement, displacement or stabilization of this kernel, and the usual descriptors become geometric: niche breadth is the size of the kernel, resilience is the distance from the current state to its boundary, and construction efficiency is kernel gain per unit work. No utility function is posited, and selection can install mechanistic policies that keep a lineage viable without foresight. When the edited object is an interaction graph, the same picture applies to adaptive networks, in which node states and topology coevolve and adding or cutting an edge creates or destroys a feasible transition [@gross2008].
 
 ## 5. Direct and niche-mediated selection
 
@@ -92,7 +92,7 @@ $$
 \mathcal{K}_k = q^\top R^{k-1} B,
 $$
 
-which records the strength, sign, delay and generational reach of a construction (Lehmann, 2008). A costly constructor is favoured when the discounted, recipient-weighted benefit exceeds the cost,
+which records the strength, sign, delay and generational reach of a construction [@lehmann2008]. A costly constructor is favoured when the discounted, recipient-weighted benefit exceeds the cost,
 
 $$
 -c + \sum_{k=1}^{\infty} \beta^k\, r_k\, \mathcal{K}_k > 0,
@@ -112,21 +112,21 @@ A nomopoietic gain separates law editing from external forcing. Define $G_N(k)$ 
 
 ![Trajectory separation from a counterfactual after a single construction action, on a log scale. When the state edits the law the separation grows to $G_N(40) = 4.5$ times its initial value; in the forced twin, with the same law time-course set by an external clock, it decays toward zero.](../simulation/output/figures/gain.png){width=72%}
 
-Play can rewrite the game in which it takes place. Consider replicator dynamics for a cooperation frequency $p$ on a payoff matrix that an environment $n$ interpolates between a defection-dominant dilemma and a cooperation-favouring game, with the environment driven by the play. The cooperator's payoff advantage in this construction is $2(n - 0.5)$, independent of $p$. At any frozen environment the game is an ordinary one: play fixates at all-defect when $n < 0.5$ and at all-cooperate when $n > 0.5$, and at $n = 0.5$ exactly the advantage vanishes and play stays where it starts. With the feedback closed, the coupled system neither fixates nor comes to rest. Cooperation and environment cycle with an amplitude of $0.95$ around a mean cooperation of $0.50$ (Figure 3), a sustained oscillation of the kind first shown for game-environment feedback (Weitz, Eksin, Paarporn, Brown, & Ratcliff, 2016) and extended by models in which the current play and the current game jointly select the next game (Su, McAvoy, Wang, & Nowak, 2019). In logit coordinates the coupled system conserves a quantity along its orbits (numerical drift $3 \times 10^{-11}$ relative), so the cycles are neutral and their amplitude is set by the initial condition: starting from $(p, n) = (0.5, 0.85)$ gives $0.95$, and starting from $(0.5, 0.65)$ gives $0.52$. The population does not settle on a strategy within a fixed game, because the play keeps changing which game is played.
+Play can rewrite the game in which it takes place. Consider replicator dynamics for a cooperation frequency $p$ on a payoff matrix that an environment $n$ interpolates between a defection-dominant dilemma and a cooperation-favouring game, with the environment driven by the play. The cooperator's payoff advantage in this construction is $2(n - 0.5)$, independent of $p$. At any frozen environment the game is an ordinary one: play fixates at all-defect when $n < 0.5$ and at all-cooperate when $n > 0.5$, and at $n = 0.5$ exactly the advantage vanishes and play stays where it starts. With the feedback closed, the coupled system neither fixates nor comes to rest. Cooperation and environment cycle with an amplitude of $0.95$ around a mean cooperation of $0.50$ (Figure 3), a sustained oscillation of the kind first shown for game-environment feedback [@weitz2016] and extended by models in which the current play and the current game jointly select the next game [@su2019]. In logit coordinates the coupled system conserves a quantity along its orbits (numerical drift $3 \times 10^{-11}$ relative), so the cycles are neutral and their amplitude is set by the initial condition: starting from $(p, n) = (0.5, 0.85)$ gives $0.95$, and starting from $(0.5, 0.65)$ gives $0.52$. The population does not settle on a strategy within a fixed game, because the play keeps changing which game is played.
 
 ![Cooperation frequency $p$ and environment $n$ under replicator dynamics whose payoff matrix is interpolated by the environment, with the environment driven by the play. Frozen games with $n \neq 0.5$ fixate at a corner (dashed lines at $0$ and $1$); the coupled system follows a neutral cycle of amplitude $0.95$ from the initial condition used here.](../simulation/output/figures/game.png){width=90%}
 
 ## 7. Cost, composition and scale
 
-Construction requires work, because a constructed state relaxes toward the environment's passive dynamics unless it is maintained. If $P_0$ is the passive path distribution and $P_\pi$ the distribution under a construction policy, a stochastic-control reading prices the policy by a path-space divergence, $\mathcal{C}(\pi) \propto D_{\mathrm{KL}}(P_\pi \,\|\, P_0)$, the cost of holding trajectories away from where they would drift on their own (Todorov, 2009). A variational free-energy account of the same organism-environment loop has been developed within active inference; it is useful for perception-action coupling and is one available formulation among several (Constant, Ramstead, Veissière, Campbell, & Friston, 2018).
+Construction requires work, because a constructed state relaxes toward the environment's passive dynamics unless it is maintained. If $P_0$ is the passive path distribution and $P_\pi$ the distribution under a construction policy, a stochastic-control reading prices the policy by a path-space divergence, $\mathcal{C}(\pi) \propto D_{\mathrm{KL}}(P_\pi \,\|\, P_0)$, the cost of holding trajectories away from where they would drift on their own [@todorov2009]. A variational free-energy account of the same organism-environment loop has been developed within active inference; it is useful for perception-action coupling and is one available formulation among several [@constant2018].
 
-Organisms are open systems that exchange matter, energy and information, so the framework needs a way to nest constructors without treating a cell, a tissue, an organism and an ecosystem as one monolith. The compositional tools of open games supply one. A constructor is a lens, a forward map that acts on the environment paired with a backward map that returns altered constraints and selection pressures, and lenses compose along shared interfaces in a symmetric monoidal category (Ghani, Hedges, Winschel, & Zahn, 2018). Composition guarantees that a model built at one scale connects to a model at the next; it does not by itself predict the biology.
+Organisms are open systems that exchange matter, energy and information, so the framework needs a way to nest constructors without treating a cell, a tissue, an organism and an ecosystem as one monolith. The compositional tools of open games supply one. A constructor is a lens, a forward map that acts on the environment paired with a backward map that returns altered constraints and selection pressures, and lenses compose along shared interfaces in a symmetric monoidal category [@ghani2018]. Composition guarantees that a model built at one scale connects to a model at the next; it does not by itself predict the biology.
 
-At large scales most construction consists of many small local actions, and the question is which of them survive coarse-graining to become macroscopic niche variables such as trails, fields, conventions and regimes. This is a renormalization question. Under coarse-graining the organism-environment couplings transform, and a given constructor effect is irrelevant if it washes out, marginal if it persists without amplification, and relevant if it grows to dominate the large-scale description (Wilson, 1975). A niche is then an organism-produced causal memory that survives coarse-graining. Three dimensionless quantities organize the regimes: the persistence ratio $\Pi = \tau_E/\tau_G$ of environmental memory to generation time, the feedback gain $\Gamma$ of the closed loop, and the capture $Q$ of delayed benefit that returns to the constructor's lineage. Large $\Pi$ with small $Q$ describes public infrastructure open to exploitation; large $\Pi$ with large $Q$ an inherited niche; high positive $\Gamma$ runaway feedback or a tipping point; and high negative $\Gamma$ homeostatic regulation. The persistence threshold computed in Section 6 is the point on the $\Pi$ axis at which a costly constructor begins to pay.
+At large scales most construction consists of many small local actions, and the question is which of them survive coarse-graining to become macroscopic niche variables such as trails, fields, conventions and regimes. This is a renormalization question. Under coarse-graining the organism-environment couplings transform, and a given constructor effect is irrelevant if it washes out, marginal if it persists without amplification, and relevant if it grows to dominate the large-scale description [@wilson1975]. A niche is then an organism-produced causal memory that survives coarse-graining. Three dimensionless quantities organize the regimes: the persistence ratio $\Pi = \tau_E/\tau_G$ of environmental memory to generation time, the feedback gain $\Gamma$ of the closed loop, and the capture $Q$ of delayed benefit that returns to the constructor's lineage. Large $\Pi$ with small $Q$ describes public infrastructure open to exploitation; large $\Pi$ with large $Q$ an inherited niche; high positive $\Gamma$ runaway feedback or a tipping point; and high negative $\Gamma$ homeostatic regulation. The persistence threshold computed in Section 6 is the point on the $\Pi$ axis at which a costly constructor begins to pay.
 
 ## 8. Related concepts
 
-Two terminological neighbours should be distinguished. An autopoietic system produces its own components and thereby its own boundary (Maturana & Varela, 1980), whereas a nomopoietic system produces its own laws, and a system can do either without the other. Metadynamics in molecular simulation is an enhanced-sampling method for escaping free-energy minima (Laio & Parrinello, 2002); it shares a stem with the present term and is otherwise unrelated.
+Two terminological neighbours should be distinguished. An autopoietic system produces its own components and thereby its own boundary [@maturana1980], whereas a nomopoietic system produces its own laws, and a system can do either without the other. Metadynamics in molecular simulation is an enhanced-sampling method for escaping free-energy minima [@laio2002]; it shares a stem with the present term and is otherwise unrelated.
 
 ## 9. Limitations
 
@@ -141,43 +141,3 @@ Treating evolution as motion across a fixed landscape asks which point a lineage
 The simulation (`analyses.py`, `figures.py`, `run_all.py`) is deterministic, uses closed forms or numerical solutions to tolerance, samples nothing, and reproduces every number and figure reported here. It checks the analytic selection gradient against a finite difference, the closed-form kernel sum against a truncated lineage sum, the refined critical persistence against the grid crossing, and conservation of the game's orbit invariant.
 
 ## References
-
-Aubin, J.-P. (1991). *Viability Theory*. Boston: Birkhäuser.
-
-Constant, A., Ramstead, M. J. D., Veissière, S. P. L., Campbell, J. O., & Friston, K. J. (2018). A variational approach to niche construction. *Journal of the Royal Society Interface*, 15(141), 20170685.
-
-Dawkins, R. (1982). *The Extended Phenotype: The Gene as the Unit of Selection*. Oxford: W. H. Freeman.
-
-Geritz, S. A. H., Kisdi, É., Meszéna, G., & Metz, J. A. J. (1998). Evolutionarily singular strategies and the adaptive growth and branching of the evolutionary tree. *Evolutionary Ecology*, 12(1), 35--57.
-
-Ghani, N., Hedges, J., Winschel, V., & Zahn, P. (2018). Compositional game theory. In *Proceedings of the 33rd Annual ACM/IEEE Symposium on Logic in Computer Science*, 472--481.
-
-Gross, T., & Blasius, B. (2008). Adaptive coevolutionary networks: a review. *Journal of the Royal Society Interface*, 5(20), 259--271.
-
-Kerferd, G. B. (1981). *The Sophistic Movement*. Cambridge: Cambridge University Press.
-
-Laio, A., & Parrinello, M. (2002). Escaping free-energy minima. *Proceedings of the National Academy of Sciences*, 99(20), 12562--12566.
-
-Laland, K. N., Odling-Smee, F. J., & Feldman, M. W. (1999). Evolutionary consequences of niche construction and their implications for ecology. *Proceedings of the National Academy of Sciences*, 96(18), 10242--10247.
-
-Lee, E. D., Flack, J. C., & Krakauer, D. C. (2022). Outsourcing memory through niche construction. *arXiv preprint* arXiv:2209.00476.
-
-Lehmann, L. (2008). The adaptive dynamics of niche constructing traits in spatially subdivided populations: evolving posthumous extended phenotypes. *Evolution*, 62(3), 549--566.
-
-Maturana, H. R., & Varela, F. J. (1980). *Autopoiesis and Cognition: The Realization of the Living*. Dordrecht: D. Reidel.
-
-Metz, J. A. J., Nisbet, R. M., & Geritz, S. A. H. (1992). How should we define "fitness" for general ecological scenarios? *Trends in Ecology & Evolution*, 7(6), 198--202.
-
-Moulay, E., & Baguelin, M. (2005). Meta-dynamical adaptive systems and their applications to a fractal algorithm and a biological model. *Physica D: Nonlinear Phenomena*, 207(1--2), 79--90.
-
-Odling-Smee, F. J., Laland, K. N., & Feldman, M. W. (2003). *Niche Construction: The Neglected Process in Evolution*. Princeton, NJ: Princeton University Press.
-
-Su, Q., McAvoy, A., Wang, L., & Nowak, M. A. (2019). Evolutionary dynamics with game transitions. *Proceedings of the National Academy of Sciences*, 116(51), 25398--25404.
-
-Todorov, E. (2009). Efficient computation of optimal actions. *Proceedings of the National Academy of Sciences*, 106(28), 11478--11483.
-
-Weitz, J. S., Eksin, C., Paarporn, K., Brown, S. P., & Ratcliff, W. C. (2016). An oscillating tragedy of the commons in replicator dynamics with game-environment feedback. *Proceedings of the National Academy of Sciences*, 113(47), E7518--E7525.
-
-Wilson, K. G. (1975). The renormalization group: critical phenomena and the Kondo problem. *Reviews of Modern Physics*, 47(4), 773--840.
-
-Wong, M. L., Cleland, C. E., Arend, D., Bartlett, S., Cleaves, H. J., Demarest, H., Prabhu, A., Lunine, J. I., & Hazen, R. M. (2023). On the roles of function and selection in evolving systems. *Proceedings of the National Academy of Sciences*, 120(43), e2310223120.

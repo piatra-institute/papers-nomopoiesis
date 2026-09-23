@@ -3,6 +3,17 @@
 Dated log of editorial passes and verification runs. Newest first.
 See the workspace docs (run `papers docs`): writing-pipeline.md §7 and refresh-pipeline.md.
 
+## 2026-09-23 — structured-evidence migration
+
+Structured-evidence migration (references and claims).
+- references.yaml: 20 CSL entries. 13 matched in Crossref by title, authors and year; gross2008, metz1992 and lee2022 (arXiv DataCite DOI) resolved through doi.org; aubin1991, dawkins1982, kerferd1981, maturana1980 and odlingsmee2003 entered by hand from publisher details. In-text APA-style citations (with "&") converted to Pandoc [@id] syntax by hand where the converter did not match them; legacy reference list replaced by the citeproc-rendered list (Chicago author-date).
+- Metadata fixes from records: geritz1998 author names (Meszéna, Éva Kisdi); page/article numbers added for weitz2016 (E7518-E7525), wong2023 (e2310223120), constant2018 (20170685). No bibliographic error in the prose.
+- Simulation: analyses.py now also records gain_forced_k40_sci (1.819e-12) and separation_forced_k40_sci (9.095e-13) in results.json, computed from the existing forced-twin separations, so that "decays below 10^-11" is backed by a stored value (gain_forced_k40 was stored as 0.0 at six decimals). No other value changed; figures unchanged.
+- claims.yaml: 47 claims (23 computation, 9 source, 9 interpretation, 3 definition, 3 assumption). Every model number in the abstract, Section 6 and the figure captions is bound to simulation/output/results.json; bounds ("below 10^-11", drift 3 x 10^-11, "to six figures") bound as interpretations stating the stored values.
+- Source statements not bound: lee2022 (its abstract concerns memory duration and environmental volatility; it does not state the path-specific causal effect the sentence attributes to it, so the attribution is uncertain), todorov2009 (KL cost not in the abstract), metz1992, geritz1998, moulay2005 (no abstract retrievable), dawkins1982, aubin1991, kerferd1981, odlingsmee2003, maturana1980, wilson1975.
+- Execution receipt: run id nomopoiesis (uv run python run_all.py), re-run after the two added fields.
+- metadata claims_target: claim-ledger.
+
 ## 2026-09-23 — prose revision
 
 Prose revision against the house standard, with a grid and number audit of the simulation.

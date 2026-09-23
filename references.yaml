@@ -1,0 +1,349 @@
+# CSL references with stable IDs; cite with Pandoc [@id] syntax.
+# Migrated from the legacy inline bibliography. Entries with a DOI were resolved through doi.org
+# content negotiation (CSL-JSON) and checked for year and title; others were matched in Crossref
+# or entered by hand. Provenance per entry is in sources.md.
+references:
+- id: aubin1991
+  type: book
+  title: Viability Theory
+  author:
+  - family: Aubin
+    given: Jean-Pierre
+  publisher: Birkhäuser
+  publisher-place: Boston
+  issued:
+    date-parts:
+    - - 1991
+- id: constant2018
+  type: article-journal
+  title: A variational approach to niche construction
+  author:
+  - given: Axel
+    family: Constant
+  - given: Maxwell J. D.
+    family: Ramstead
+  - given: Samuel P. L.
+    family: Veissière
+  - given: John O.
+    family: Campbell
+  - given: Karl J.
+    family: Friston
+  container-title: Journal of The Royal Society Interface
+  volume: '15'
+  issue: '141'
+  DOI: 10.1098/rsif.2017.0685
+  issued:
+    date-parts:
+    - - 2018
+  page: '20170685'
+- id: dawkins1982
+  type: book
+  title: 'The Extended Phenotype: The Gene as the Unit of Selection'
+  author:
+  - family: Dawkins
+    given: Richard
+  publisher: W. H. Freeman
+  publisher-place: Oxford
+  issued:
+    date-parts:
+    - - 1982
+- id: geritz1998
+  type: article-journal
+  title: Evolutionarily singular strategies and the adaptive growth and branching of the evolutionary
+    tree
+  author:
+  - given: S.A.H.
+    family: Geritz
+  - given: Éva
+    family: Kisdi
+  - family: Meszéna
+    given: G.
+  - given: J.A.J.
+    family: Metz
+  container-title: Evolutionary Ecology
+  volume: '12'
+  issue: '1'
+  page: 35-57
+  DOI: 10.1023/a:1006554906681
+  issued:
+    date-parts:
+    - - 1998
+- id: ghani2018
+  type: paper-conference
+  title: Compositional Game Theory
+  author:
+  - given: Neil
+    family: Ghani
+  - given: Jules
+    family: Hedges
+  - given: Viktor
+    family: Winschel
+  - given: Philipp
+    family: Zahn
+  container-title: Proceedings of the 33rd Annual ACM/IEEE Symposium on Logic in Computer Science
+  page: 472-481
+  publisher: ACM
+  DOI: 10.1145/3209108.3209165
+  issued:
+    date-parts:
+    - - 2018
+- id: gross2008
+  type: article-journal
+  title: 'Adaptive coevolutionary networks: a review'
+  author:
+  - given: Thilo
+    family: Gross
+  - given: Bernd
+    family: Blasius
+  container-title: Journal of The Royal Society Interface
+  volume: '5'
+  issue: '20'
+  page: 259-271
+  DOI: 10.1098/rsif.2007.1229
+  issued:
+    date-parts:
+    - - 2008
+- id: kerferd1981
+  type: book
+  title: The Sophistic Movement
+  author:
+  - family: Kerferd
+    given: G. B.
+  publisher: Cambridge University Press
+  publisher-place: Cambridge
+  issued:
+    date-parts:
+    - - 1981
+- id: laio2002
+  type: article-journal
+  title: Escaping free-energy minima
+  author:
+  - given: Alessandro
+    family: Laio
+  - given: Michele
+    family: Parrinello
+  container-title: Proceedings of the National Academy of Sciences
+  volume: '99'
+  issue: '20'
+  page: 12562-12566
+  DOI: 10.1073/pnas.202427399
+  issued:
+    date-parts:
+    - - 2002
+- id: laland1999
+  type: article-journal
+  title: Evolutionary consequences of niche construction and their implications for ecology
+  author:
+  - given: K. N.
+    family: Laland
+  - given: F. J.
+    family: Odling-Smee
+  - given: M. W.
+    family: Feldman
+  container-title: Proceedings of the National Academy of Sciences
+  volume: '96'
+  issue: '18'
+  page: 10242-10247
+  DOI: 10.1073/pnas.96.18.10242
+  issued:
+    date-parts:
+    - - 1999
+- id: lee2022
+  type: article
+  title: Outsourcing Memory Through Niche Construction
+  author:
+  - family: Lee
+    given: Edward D.
+  - family: Flack
+    given: Jessica C.
+  - family: Krakauer
+    given: David C.
+  DOI: 10.48550/arXiv.2209.00476
+  issued:
+    date-parts:
+    - - 2022
+  number: arXiv:2209.00476
+  container-title: arXiv
+- id: lehmann2008
+  type: article-journal
+  title: 'The Adaptive Dynamics of Niche Constructing Traits in Spatially Subdivided Populations: Evolving
+    Posthumous Extended Phenotypes'
+  author:
+  - given: Laurent
+    family: Lehmann
+  container-title: Evolution
+  volume: '62'
+  issue: '3'
+  page: 549-566
+  DOI: 10.1111/j.1558-5646.2007.00291.x
+  issued:
+    date-parts:
+    - - 2008
+- id: maturana1980
+  type: book
+  title: 'Autopoiesis and Cognition: The Realization of the Living'
+  author:
+  - family: Maturana
+    given: Humberto R.
+  - family: Varela
+    given: Francisco J.
+  collection-title: Boston Studies in the Philosophy of Science
+  collection-number: '42'
+  publisher: D. Reidel
+  publisher-place: Dordrecht
+  DOI: 10.1007/978-94-009-8947-4
+  issued:
+    date-parts:
+    - - 1980
+- id: metz1992
+  type: article-journal
+  title: How should we define ‘fitness’ for general ecological scenarios?
+  author:
+  - given: J.A.J.
+    family: Metz
+  - given: R.M.
+    family: Nisbet
+  - given: S.A.H.
+    family: Geritz
+  container-title: Trends in Ecology & Evolution
+  volume: '7'
+  issue: '6'
+  page: 198-202
+  DOI: 10.1016/0169-5347(92)90073-k
+  issued:
+    date-parts:
+    - - 1992
+- id: moulay2005
+  type: article-journal
+  title: Meta-dynamical adaptive systems and their applications to a fractal algorithm and a biological
+    model
+  author:
+  - given: Emmanuel
+    family: Moulay
+  - given: Marc
+    family: Baguelin
+  container-title: 'Physica D: Nonlinear Phenomena'
+  volume: '207'
+  issue: 1-2
+  page: 79-90
+  DOI: 10.1016/j.physd.2005.05.013
+  issued:
+    date-parts:
+    - - 2005
+- id: odlingsmee2003
+  type: book
+  title: 'Niche Construction: The Neglected Process in Evolution'
+  author:
+  - family: Odling-Smee
+    given: F. John
+  - family: Laland
+    given: Kevin N.
+  - family: Feldman
+    given: Marcus W.
+  collection-title: Monographs in Population Biology
+  collection-number: '37'
+  publisher: Princeton University Press
+  publisher-place: Princeton, NJ
+  issued:
+    date-parts:
+    - - 2003
+- id: su2019
+  type: article-journal
+  title: Evolutionary dynamics with game transitions
+  author:
+  - given: Qi
+    family: Su
+  - given: Alex
+    family: McAvoy
+  - given: Long
+    family: Wang
+  - given: Martin A.
+    family: Nowak
+  container-title: Proceedings of the National Academy of Sciences
+  volume: '116'
+  issue: '51'
+  page: 25398-25404
+  DOI: 10.1073/pnas.1908936116
+  issued:
+    date-parts:
+    - - 2019
+- id: todorov2009
+  type: article-journal
+  title: Efficient computation of optimal actions
+  author:
+  - given: Emanuel
+    family: Todorov
+  container-title: Proceedings of the National Academy of Sciences
+  volume: '106'
+  issue: '28'
+  page: 11478-11483
+  DOI: 10.1073/pnas.0710743106
+  issued:
+    date-parts:
+    - - 2009
+- id: weitz2016
+  type: article-journal
+  title: An oscillating tragedy of the commons in replicator dynamics with game-environment feedback
+  author:
+  - given: Joshua S.
+    family: Weitz
+  - given: Ceyhun
+    family: Eksin
+  - given: Keith
+    family: Paarporn
+  - given: Sam P.
+    family: Brown
+  - given: William C.
+    family: Ratcliff
+  container-title: Proceedings of the National Academy of Sciences
+  volume: '113'
+  issue: '47'
+  DOI: 10.1073/pnas.1604096113
+  issued:
+    date-parts:
+    - - 2016
+  page: E7518-E7525
+- id: wilson1975
+  type: article-journal
+  title: 'The renormalization group: Critical phenomena and the Kondo problem'
+  author:
+  - given: Kenneth G.
+    family: Wilson
+  container-title: Reviews of Modern Physics
+  volume: '47'
+  issue: '4'
+  page: 773-840
+  DOI: 10.1103/revmodphys.47.773
+  issued:
+    date-parts:
+    - - 1975
+- id: wong2023
+  type: article-journal
+  title: On the roles of function and selection in evolving systems
+  author:
+  - given: Michael L.
+    family: Wong
+  - given: Carol E.
+    family: Cleland
+  - given: Daniel
+    family: Arend
+  - given: Stuart
+    family: Bartlett
+  - given: H. James
+    family: Cleaves
+  - given: Heather
+    family: Demarest
+  - given: Anirudh
+    family: Prabhu
+  - given: Jonathan I.
+    family: Lunine
+  - given: Robert M.
+    family: Hazen
+  container-title: Proceedings of the National Academy of Sciences
+  volume: '120'
+  issue: '43'
+  DOI: 10.1073/pnas.2310223120
+  issued:
+    date-parts:
+    - - 2023
+  page: e2310223120

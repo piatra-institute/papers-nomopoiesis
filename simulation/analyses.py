@@ -262,6 +262,8 @@ def analysis_nomopoietic_gain() -> dict:
         "gain_genuine_k40": round(gain(sep_genuine, 40), 6),
         "gain_forced_k10": round(gain(sep_forced, 10), 6),
         "gain_forced_k40": round(gain(sep_forced, 40), 6),
+        "gain_forced_k40_sci": float(f"{gain(sep_forced, 40):.3e}"),
+        "separation_forced_k40_sci": float(f"{sep_forced[40]:.3e}"),
         "genuine_grows": bool(sep_genuine[40] > sep_genuine[1]),
         "forced_decays": bool(sep_forced[40] < sep_forced[1]),
         "_sep_genuine": sep_genuine.tolist(),

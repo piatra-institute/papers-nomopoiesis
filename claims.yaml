@@ -1,0 +1,544 @@
+schema: 1
+coverage: reviewed
+reviewed_manuscript_sha256: c5e642461d8705aa2d901ce53c02548fc8ebd1d05dc0b4ee0526f72adff8dc29
+claims:
+- id: abs-direct
+  kind: computation
+  passage: In four deterministic models, a trait with direct selection gradient $-0.6$ has a total gradient
+    of $+5.4$ once the environment it builds is counted; a costly constructor is favoured only above an
+    environmental persistence of $0.68$; a one-off action under a state-edited law grows to $4.5$ times
+    its initial effect after forty steps, while in an externally forced twin with the same law time-course
+    it decays below $10^{-11}$; and a replicator game whose payoff matrix is written by play sustains
+    cooperation cycles of amplitude $0.95$, whereas every frozen game fixates or, at one neutral environment,
+    stays put.
+  evidence:
+    file: simulation/output/results.json
+    run_id: nomopoiesis
+    pointer: /selection_decomposition/direct_gradient
+    reported: '-0.6'
+    decimals: 1
+    units: direct selection gradient dw/dtheta at fixed environment
+    conditions: 'coupled trait-environment model: cost 0.5, benefit 1.2, rho 0.8, kappa 1.0, resident
+      theta 0.6'
+- id: abs-total
+  kind: computation
+  passage: In four deterministic models, a trait with direct selection gradient $-0.6$ has a total gradient
+    of $+5.4$ once the environment it builds is counted; a costly constructor is favoured only above an
+    environmental persistence of $0.68$; a one-off action under a state-edited law grows to $4.5$ times
+    its initial effect after forty steps, while in an externally forced twin with the same law time-course
+    it decays below $10^{-11}$; and a replicator game whose payoff matrix is written by play sustains
+    cooperation cycles of amplitude $0.95$, whereas every frozen game fixates or, at one neutral environment,
+    stays put.
+  evidence:
+    file: simulation/output/results.json
+    run_id: nomopoiesis
+    pointer: /selection_decomposition/total_gradient
+    reported: '+5.4'
+    decimals: 1
+    units: total selection gradient including the niche-mediated term
+    conditions: 'coupled trait-environment model: cost 0.5, benefit 1.2, rho 0.8, kappa 1.0, resident
+      theta 0.6'
+- id: abs-persistence
+  kind: computation
+  passage: In four deterministic models, a trait with direct selection gradient $-0.6$ has a total gradient
+    of $+5.4$ once the environment it builds is counted; a costly constructor is favoured only above an
+    environmental persistence of $0.68$; a one-off action under a state-edited law grows to $4.5$ times
+    its initial effect after forty steps, while in an externally forced twin with the same law time-course
+    it decays below $10^{-11}$; and a replicator game whose payoff matrix is written by play sustains
+    cooperation cycles of amplitude $0.95$, whereas every frozen game fixates or, at one neutral environment,
+    stays put.
+  evidence:
+    file: simulation/output/results.json
+    run_id: nomopoiesis
+    pointer: /persistence_threshold/critical_persistence_exact
+    reported: '0.68'
+    decimals: 2
+    units: critical environmental persistence (spectral radius of R)
+    conditions: 'niche-response kernel: beta 0.9, association r 0.8, cost 1.4, closed-form geometric sum
+      checked against a 400-generation sum'
+- id: abs-gain
+  kind: computation
+  passage: In four deterministic models, a trait with direct selection gradient $-0.6$ has a total gradient
+    of $+5.4$ once the environment it builds is counted; a costly constructor is favoured only above an
+    environmental persistence of $0.68$; a one-off action under a state-edited law grows to $4.5$ times
+    its initial effect after forty steps, while in an externally forced twin with the same law time-course
+    it decays below $10^{-11}$; and a replicator game whose payoff matrix is written by play sustains
+    cooperation cycles of amplitude $0.95$, whereas every frozen game fixates or, at one neutral environment,
+    stays put.
+  evidence:
+    file: simulation/output/results.json
+    run_id: nomopoiesis
+    pointer: /nomopoietic_gain/gain_genuine_k40
+    reported: '4.5'
+    decimals: 1
+    units: separation ratio G_N(40), state-edited law
+    conditions: 'state-edited law vs externally forced twin: alpha 0.5, law coupling g 0.05, nudge 0.5,
+      horizon 40'
+- id: abs-amplitude
+  kind: computation
+  passage: In four deterministic models, a trait with direct selection gradient $-0.6$ has a total gradient
+    of $+5.4$ once the environment it builds is counted; a costly constructor is favoured only above an
+    environmental persistence of $0.68$; a one-off action under a state-edited law grows to $4.5$ times
+    its initial effect after forty steps, while in an externally forced twin with the same law time-course
+    it decays below $10^{-11}$; and a replicator game whose payoff matrix is written by play sustains
+    cooperation cycles of amplitude $0.95$, whereas every frozen game fixates or, at one neutral environment,
+    stays put.
+  evidence:
+    file: simulation/output/results.json
+    run_id: nomopoiesis
+    pointer: /game_rewritten/coupled_coop_amplitude
+    reported: '0.95'
+    decimals: 2
+    units: amplitude of the cooperation cycle
+    conditions: 'replicator dynamics with environment-interpolated payoffs: dt 0.02, 60000 steps, feedback
+      eps 0.6'
+- id: abs-forced-bound
+  kind: interpretation
+  passage: In four deterministic models, a trait with direct selection gradient $-0.6$ has a total gradient
+    of $+5.4$ once the environment it builds is counted; a costly constructor is favoured only above an
+    environmental persistence of $0.68$; a one-off action under a state-edited law grows to $4.5$ times
+    its initial effect after forty steps, while in an externally forced twin with the same law time-course
+    it decays below $10^{-11}$; and a replicator game whose payoff matrix is written by play sustains
+    cooperation cycles of amplitude $0.95$, whereas every frozen game fixates or, at one neutral environment,
+    stays put.
+  rationale: '"Decays below 10^-11": the forced twin''s separation ratio at step 40 is /nomopoietic_gain/gain_forced_k40_sci
+    = 1.819e-12 and the absolute separation /nomopoietic_gain/separation_forced_k40_sci = 9.095e-13; both
+    are below 1e-11. Stated as a bound, so bound here as an interpretation of the recorded values.'
+- id: direct
+  kind: computation
+  passage: In a coupled trait-environment model in which the trait is directly costly and builds an environment
+    that pays, the direct gradient is $dw/d\theta = -0.6$, so reasoning at a fixed environment classifies
+    the trait as deleterious.
+  evidence:
+    file: simulation/output/results.json
+    run_id: nomopoiesis
+    pointer: /selection_decomposition/direct_gradient
+    reported: '-0.6'
+    decimals: 1
+    units: direct selection gradient
+    conditions: 'coupled trait-environment model: cost 0.5, benefit 1.2, rho 0.8, kappa 1.0, resident
+      theta 0.6'
+- id: niche-term
+  kind: computation
+  passage: 'The niche-mediated term is $+6.0$ and the total gradient $+5.4$: once the environment tracks
+    the trait, the trait is favoured.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: nomopoiesis
+    pointer: /selection_decomposition/niche_mediated_gradient
+    reported: '+6.0'
+    decimals: 1
+    units: niche-mediated selection gradient
+    conditions: 'coupled trait-environment model: cost 0.5, benefit 1.2, rho 0.8, kappa 1.0, resident
+      theta 0.6'
+- id: total
+  kind: computation
+  passage: 'The niche-mediated term is $+6.0$ and the total gradient $+5.4$: once the environment tracks
+    the trait, the trait is favoured.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: nomopoiesis
+    pointer: /selection_decomposition/total_gradient
+    reported: '+5.4'
+    decimals: 1
+    units: total selection gradient
+    conditions: 'coupled trait-environment model: cost 0.5, benefit 1.2, rho 0.8, kappa 1.0, resident
+      theta 0.6'
+- id: fd-agree
+  kind: interpretation
+  passage: The analytic total agrees with a finite difference of the numerically solved equilibrium fitness
+    to six figures.
+  rationale: results.json stores total_gradient = 5.4 and finite_difference_total = 5.4, both rounded
+    to six decimals, and analytic_matches_numeric = true (/selection_decomposition).
+- id: crit
+  kind: computation
+  passage: As the environmental persistence, the spectral radius of $R$, is varied, net selection on a
+    costly constructor crosses zero at a critical persistence of $0.68$, located by bisection on the closed
+    form ($0.677365$).
+  evidence:
+    file: simulation/output/results.json
+    run_id: nomopoiesis
+    pointer: /persistence_threshold/critical_persistence_exact
+    reported: '0.68'
+    decimals: 2
+    units: critical persistence
+    conditions: 'niche-response kernel: beta 0.9, association r 0.8, cost 1.4, closed-form geometric sum
+      checked against a 400-generation sum'
+- id: crit-exact
+  kind: computation
+  passage: As the environmental persistence, the spectral radius of $R$, is varied, net selection on a
+    costly constructor crosses zero at a critical persistence of $0.68$, located by bisection on the closed
+    form ($0.677365$).
+  evidence:
+    file: simulation/output/results.json
+    run_id: nomopoiesis
+    pointer: /persistence_threshold/critical_persistence_exact
+    reported: '0.677365'
+    decimals: 6
+    units: critical persistence, bisection on the closed form
+    conditions: 'niche-response kernel: beta 0.9, association r 0.8, cost 1.4, closed-form geometric sum
+      checked against a 400-generation sum'
+- id: net-low
+  kind: computation
+  passage: Below it the environment forgets the construction before the benefit returns and the trait
+    is selected against ($-0.47$ at persistence $0.3$); above it ecological inheritance delivers the benefit
+    to descendants and the trait invades ($+0.60$ at persistence $0.9$).
+  evidence:
+    file: simulation/output/results.json
+    run_id: nomopoiesis
+    pointer: /persistence_threshold/net_selection_at_sr_0.3
+    reported: '-0.47'
+    decimals: 2
+    units: net selection at persistence 0.3
+    conditions: 'niche-response kernel: beta 0.9, association r 0.8, cost 1.4, closed-form geometric sum
+      checked against a 400-generation sum'
+- id: net-high
+  kind: computation
+  passage: Below it the environment forgets the construction before the benefit returns and the trait
+    is selected against ($-0.47$ at persistence $0.3$); above it ecological inheritance delivers the benefit
+    to descendants and the trait invades ($+0.60$ at persistence $0.9$).
+  evidence:
+    file: simulation/output/results.json
+    run_id: nomopoiesis
+    pointer: /persistence_threshold/net_selection_at_sr_0.9
+    reported: '+0.60'
+    decimals: 2
+    units: net selection at persistence 0.9
+    conditions: 'niche-response kernel: beta 0.9, association r 0.8, cost 1.4, closed-form geometric sum
+      checked against a 400-generation sum'
+- id: lineage-sum
+  kind: interpretation
+  passage: The closed-form geometric sum $\beta r\, q^\top (I - \beta r R)^{-1} B$ agrees with an explicit
+    four-hundred-generation lineage sum.
+  rationale: 'results.json: kmax_truncation = 400 and closed_form_matches_truncated_sum = true (/persistence_threshold).'
+- id: gain
+  kind: computation
+  passage: When the state edits the law, the perturbation propagates through the law and the separation
+    grows to $4.5$ times its initial value by forty steps (Figure 2).
+  evidence:
+    file: simulation/output/results.json
+    run_id: nomopoiesis
+    pointer: /nomopoietic_gain/gain_genuine_k40
+    reported: '4.5'
+    decimals: 1
+    units: separation ratio G_N(40)
+    conditions: 'state-edited law vs externally forced twin: alpha 0.5, law coupling g 0.05, nudge 0.5,
+      horizon 40'
+- id: forced-bound
+  kind: interpretation
+  passage: In an externally forced twin, with the identical law time-course and no path from state to
+    law, the same action decays, and its separation falls below $10^{-11}$ over the same span.
+  rationale: 'Bound on recorded values: /nomopoietic_gain/separation_forced_k40_sci = 9.095e-13 and gain_forced_k40_sci
+    = 1.819e-12 (fields added in the migration from the same computation), and forced_decays = true.'
+- id: amp
+  kind: computation
+  passage: Cooperation and environment cycle with an amplitude of $0.95$ around a mean cooperation of
+    $0.50$ (Figure 3), a sustained oscillation of the kind first shown for game-environment feedback [@weitz2016]
+    and extended by models in which the current play and the current game jointly select the next game
+    [@su2019].
+  evidence:
+    file: simulation/output/results.json
+    run_id: nomopoiesis
+    pointer: /game_rewritten/coupled_coop_amplitude
+    reported: '0.95'
+    decimals: 2
+    units: cycle amplitude of cooperation
+    conditions: 'replicator dynamics with environment-interpolated payoffs: dt 0.02, 60000 steps, feedback
+      eps 0.6'
+- id: mean
+  kind: computation
+  passage: Cooperation and environment cycle with an amplitude of $0.95$ around a mean cooperation of
+    $0.50$ (Figure 3), a sustained oscillation of the kind first shown for game-environment feedback [@weitz2016]
+    and extended by models in which the current play and the current game jointly select the next game
+    [@su2019].
+  evidence:
+    file: simulation/output/results.json
+    run_id: nomopoiesis
+    pointer: /game_rewritten/coupled_coop_mean
+    reported: '0.50'
+    decimals: 2
+    units: mean cooperation over the cycle
+    conditions: 'replicator dynamics with environment-interpolated payoffs: dt 0.02, 60000 steps, feedback
+      eps 0.6'
+- id: amp-085
+  kind: computation
+  passage: 'In logit coordinates the coupled system conserves a quantity along its orbits (numerical drift
+    $3 \times 10^{-11}$ relative), so the cycles are neutral and their amplitude is set by the initial
+    condition: starting from $(p, n) = (0.5, 0.85)$ gives $0.95$, and starting from $(0.5, 0.65)$ gives
+    $0.52$.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: nomopoiesis
+    pointer: /game_rewritten/coupled_coop_amplitude
+    reported: '0.95'
+    decimals: 2
+    units: cycle amplitude from (0.5, 0.85)
+    conditions: 'replicator dynamics with environment-interpolated payoffs: dt 0.02, 60000 steps, feedback
+      eps 0.6'
+- id: amp-065
+  kind: computation
+  passage: 'In logit coordinates the coupled system conserves a quantity along its orbits (numerical drift
+    $3 \times 10^{-11}$ relative), so the cycles are neutral and their amplitude is set by the initial
+    condition: starting from $(p, n) = (0.5, 0.85)$ gives $0.95$, and starting from $(0.5, 0.65)$ gives
+    $0.52$.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: nomopoiesis
+    pointer: /game_rewritten/coupled_coop_amplitude_from_n0_0.65
+    reported: '0.52'
+    decimals: 2
+    units: cycle amplitude from (0.5, 0.65)
+    conditions: 'replicator dynamics with environment-interpolated payoffs: dt 0.02, 60000 steps, feedback
+      eps 0.6'
+- id: drift
+  kind: interpretation
+  passage: 'In logit coordinates the coupled system conserves a quantity along its orbits (numerical drift
+    $3 \times 10^{-11}$ relative), so the cycles are neutral and their amplitude is set by the initial
+    condition: starting from $(p, n) = (0.5, 0.85)$ gives $0.95$, and starting from $(0.5, 0.65)$ gives
+    $0.52$.'
+  rationale: '"Drift 3 x 10^-11" rounds /game_rewritten/conserved_quantity_H_max_relative_drift = 3.02e-11,
+    the largest relative drift of the conserved quantity over the run.'
+- id: fix-low
+  kind: computation
+  passage: 'At any frozen environment the game is an ordinary one: play fixates at all-defect when $n
+    < 0.5$ and at all-cooperate when $n > 0.5$, and at $n = 0.5$ exactly the advantage vanishes and play
+    stays where it starts.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: nomopoiesis
+    pointer: /game_rewritten/fixed_game_neutral_env_0.5_final_p
+    reported: '0.5'
+    decimals: 1
+    units: final cooperation at the neutral frozen environment n = 0.5 (started at 0.5)
+    conditions: 'replicator dynamics with environment-interpolated payoffs: dt 0.02, 60000 steps, feedback
+      eps 0.6'
+- id: fixation
+  kind: interpretation
+  passage: 'At any frozen environment the game is an ordinary one: play fixates at all-defect when $n
+    < 0.5$ and at all-cooperate when $n > 0.5$, and at $n = 0.5$ exactly the advantage vanishes and play
+    stays where it starts.'
+  rationale: Fixation values are stored as fixed_game_low_env_fixation = 0.0 (n = 0.2) and fixed_game_high_env_fixation
+    = 1.0 (n = 0.8); the n < 0.5 and n > 0.5 statements generalise these from the payoff advantage 2(n
+    - 0.5).
+- id: cap-direct
+  kind: computation
+  passage: 'Left: the selection gradient $dw/d\theta$ split into a direct term ($-0.6$), a niche-mediated
+    term ($+6.0$) and their total ($+5.4$); the analytic total equals a finite difference of the constructed-equilibrium
+    fitness.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: nomopoiesis
+    pointer: /selection_decomposition/direct_gradient
+    reported: '-0.6'
+    decimals: 1
+    units: direct gradient
+    conditions: 'coupled trait-environment model: cost 0.5, benefit 1.2, rho 0.8, kappa 1.0, resident
+      theta 0.6'
+- id: cap-niche
+  kind: computation
+  passage: 'Left: the selection gradient $dw/d\theta$ split into a direct term ($-0.6$), a niche-mediated
+    term ($+6.0$) and their total ($+5.4$); the analytic total equals a finite difference of the constructed-equilibrium
+    fitness.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: nomopoiesis
+    pointer: /selection_decomposition/niche_mediated_gradient
+    reported: '+6.0'
+    decimals: 1
+    units: niche-mediated gradient
+    conditions: 'coupled trait-environment model: cost 0.5, benefit 1.2, rho 0.8, kappa 1.0, resident
+      theta 0.6'
+- id: cap-total
+  kind: computation
+  passage: 'Left: the selection gradient $dw/d\theta$ split into a direct term ($-0.6$), a niche-mediated
+    term ($+6.0$) and their total ($+5.4$); the analytic total equals a finite difference of the constructed-equilibrium
+    fitness.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: nomopoiesis
+    pointer: /selection_decomposition/total_gradient
+    reported: '+5.4'
+    decimals: 1
+    units: total gradient
+    conditions: 'coupled trait-environment model: cost 0.5, benefit 1.2, rho 0.8, kappa 1.0, resident
+      theta 0.6'
+- id: cap-gain
+  kind: computation
+  passage: When the state edits the law the separation grows to $G_N(40) = 4.5$ times its initial value;
+    in the forced twin, with the same law time-course set by an external clock, it decays toward zero.
+  evidence:
+    file: simulation/output/results.json
+    run_id: nomopoiesis
+    pointer: /nomopoietic_gain/gain_genuine_k40
+    reported: '4.5'
+    decimals: 1
+    units: G_N(40)
+    conditions: 'state-edited law vs externally forced twin: alpha 0.5, law coupling g 0.05, nudge 0.5,
+      horizon 40'
+- id: cap-amp
+  kind: computation
+  passage: Frozen games with $n \neq 0.5$ fixate at a corner (dashed lines at $0$ and $1$); the coupled
+    system follows a neutral cycle of amplitude $0.95$ from the initial condition used here.
+  evidence:
+    file: simulation/output/results.json
+    run_id: nomopoiesis
+    pointer: /game_rewritten/coupled_coop_amplitude
+    reported: '0.95'
+    decimals: 2
+    units: cycle amplitude
+    conditions: 'replicator dynamics with environment-interpolated payoffs: dt 0.02, 60000 steps, feedback
+      eps 0.6'
+- id: def-nomopoiesis
+  kind: definition
+  passage: We call the operator, and the process it runs, nomopoiesis.
+  rationale: Names the law-editing operator N in x_{t+1} = F_{lambda_t}(x_t), lambda_{t+1} = N(lambda_t,
+    x_t).
+- id: def-criterion
+  kind: definition
+  passage: A system is nomopoietic when there is a nontrivial path
+  rationale: The causal criterion x_t -> lambda_{t+1} -> x_{t+k}; it excludes externally clocked laws
+    and is the paper's central definition.
+- id: def-depths
+  kind: definition
+  passage: The cases can be ordered by what is rewritten.
+  rationale: Introduces parametric, structural and generative depths of nomopoiesis; a classification,
+    not an empirical claim.
+- id: def-fitness
+  kind: assumption
+  passage: Fitness is accordingly defined as the long-run invasion growth rate of a rare type in the environment
+    set by a resident, a lineage-growth quantity with no implication that organisms maximize a utility
+    [@metz1992].
+  rationale: Adopts invasion fitness as the currency; the selection results depend on it.
+- id: flattening
+  kind: interpretation
+  passage: Reading $(x,\lambda) = H(\cdot)$ as one flat system is permissible, but it deletes the difference
+    between a position and the law of motion for positions, which the model is built to track.
+  rationale: Concedes that the construction is formally an enlarged autonomous system and locates the
+    content of the concept in typing and causal asymmetry.
+- id: models-illustrative
+  kind: assumption
+  passage: None is fit to data, and every number reported is a key in the accompanying `results.json`.
+  rationale: The four models are stipulated and deterministic; their numbers test the consistency of the
+    definitions and carry no empirical weight.
+- id: magnitudes
+  kind: assumption
+  passage: The sign reversal and the persistence threshold follow from the chosen functional forms, and
+    their magnitudes carry no empirical weight.
+  rationale: Scope limit on Section 6.
+- id: fragile-cycle
+  kind: interpretation
+  passage: 'The game oscillation is a neutral cycle whose amplitude depends on the initial condition,
+    and it is structurally fragile: noise or dissipation that breaks the conserved quantity can turn it
+    into a spiral or a limit cycle.'
+  rationale: Follows from the conserved quantity reported in Section 6; not simulated with noise.
+- id: ecological-nomopoiesis
+  kind: interpretation
+  passage: 'In this sense niche construction is ecological nomopoiesis: organisms write local law within
+    fixed physical law.'
+  rationale: The paper's central interpretive identification.
+- id: src-laland
+  kind: source
+  passage: That a constructed environment feeds back into selection, fixing otherwise deleterious alleles
+    and creating or removing polymorphisms, is the founding formal result of niche-construction theory
+    [@laland1999], and the reach of a constructor's effect beyond its own body is the extended phenotype
+    [@dawkins1982].
+  evidence:
+    citation_id: laland1999
+    locator: Abstract
+    verified: true
+    verification_note: DOI 10.1073/pnas.96.18.10242; the Crossref abstract reports that niche construction
+      can fix otherwise deleterious alleles, support stable polymorphisms where none are expected and
+      eliminate otherwise stable polymorphisms. Bound for the laland1999 clause.
+- id: src-lehmann
+  kind: source
+  passage: which records the strength, sign, delay and generational reach of a construction [@lehmann2008].
+  evidence:
+    citation_id: lehmann2008
+    locator: Abstract
+    verified: true
+    verification_note: 'DOI 10.1111/j.1558-5646.2007.00291.x; abstract (OpenAlex): inclusive-fitness analysis
+      of niche-constructing traits whose effects extend beyond the actor''s life span and reach future
+      individuals likely to share the actor''s lineage, with present benefits traded off against future
+      ones.'
+- id: src-weitz
+  kind: source
+  passage: Cooperation and environment cycle with an amplitude of $0.95$ around a mean cooperation of
+    $0.50$ (Figure 3), a sustained oscillation of the kind first shown for game-environment feedback [@weitz2016]
+    and extended by models in which the current play and the current game jointly select the next game
+    [@su2019].
+  evidence:
+    citation_id: weitz2016
+    locator: Abstract
+    verified: true
+    verification_note: DOI 10.1073/pnas.1604096113; significance statement (Crossref) identifies an oscillatory
+      tragedy of the commons cycling between deplete and replete environments and cooperation and defection.
+- id: src-su
+  kind: source
+  passage: Cooperation and environment cycle with an amplitude of $0.95$ around a mean cooperation of
+    $0.50$ (Figure 3), a sustained oscillation of the kind first shown for game-environment feedback [@weitz2016]
+    and extended by models in which the current play and the current game jointly select the next game
+    [@su2019].
+  evidence:
+    citation_id: su2019
+    locator: Abstract
+    verified: true
+    verification_note: 'DOI 10.1073/pnas.1908936116; significance statement (Crossref): games change based
+      on past actions (game transitions) in evolutionary dynamics.'
+- id: src-wong
+  kind: source
+  passage: At depth three, evolution changes the set of problems a lineage faces in addition to solving
+    problems within a fixed set; recent work on functional information attempts to quantify this expansion
+    of possibility under selection for function [@wong2023].
+  evidence:
+    citation_id: wong2023
+    locator: Abstract
+    verified: true
+    verification_note: DOI 10.1073/pnas.2310223120; the Crossref abstract proposes a law of increasing
+      functional information under selection for function, with novelty generation as a concept of selection.
+- id: src-gross
+  kind: source
+  passage: When the edited object is an interaction graph, the same picture applies to adaptive networks,
+    in which node states and topology coevolve and adding or cutting an edge creates or destroys a feasible
+    transition [@gross2008].
+  evidence:
+    citation_id: gross2008
+    locator: Abstract
+    verified: true
+    verification_note: DOI 10.1098/rsif.2007.1229; the Crossref abstract describes adaptive networks as
+      combining topological evolution with node dynamics.
+- id: src-constant
+  kind: source
+  passage: A variational free-energy account of the same organism-environment loop has been developed
+    within active inference; it is useful for perception-action coupling and is one available formulation
+    among several [@constant2018].
+  evidence:
+    citation_id: constant2018
+    locator: Abstract
+    verified: true
+    verification_note: DOI 10.1098/rsif.2017.0685; the Crossref abstract argues that niche construction
+      can be described with the variational free-energy approach.
+- id: src-ghani
+  kind: source
+  passage: A constructor is a lens, a forward map that acts on the environment paired with a backward
+    map that returns altered constraints and selection pressures, and lenses compose along shared interfaces
+    in a symmetric monoidal category [@ghani2018].
+  evidence:
+    citation_id: ghani2018
+    locator: Abstract
+    verified: true
+    verification_note: 'DOI 10.1145/3209108.3209165; abstract (OpenAlex): open games are morphisms of
+      a symmetric monoidal category, composed sequentially and in parallel, played relative to an environment.'
+- id: src-laio
+  kind: source
+  passage: Metadynamics in molecular simulation is an enhanced-sampling method for escaping free-energy
+    minima [@laio2002]; it shares a stem with the present term and is otherwise unrelated.
+  evidence:
+    citation_id: laio2002
+    locator: Abstract
+    verified: true
+    verification_note: DOI 10.1073/pnas.202427399; the Crossref abstract describes a history-dependent
+      potential that fills free-energy minima to explore the free-energy surface.
+runs:
+- id: nomopoiesis
+  required: true
+  record: verification/nomopoiesis.json

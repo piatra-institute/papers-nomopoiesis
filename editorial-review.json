@@ -1,10 +1,10 @@
 {
-  "manuscript_sha256": "1a3ab981b2654e4b8ced52a9b66de73b10ad425bca238b210bcd1a4acefa9c39",
+  "manuscript_sha256": "c5e642461d8705aa2d901ce53c02548fc8ebd1d05dc0b4ee0526f72adff8dc29",
   "full_read": true,
   "argument_review": true,
   "structure_review": true,
   "voice_review": true,
   "source_review": true,
   "final_read": true,
-  "notes": "Prose revision against the house standard for plain, declarative scientific writing. The manuscript was reread in full and rewritten paragraph by paragraph with every equation, figure, citation and result preserved. Section titles were made descriptive and numbered ('Systems that edit their own rules' became '1. Introduction'; 'What makes the editing genuine' became '2. The causal criterion for rule editing'; 'Why this is not merely a larger state space' became '3. Relation to an enlarged state space'; 'The niche-mediated component of selection' became '5. Direct and niche-mediated selection'; 'What the models show' became '6. Four minimal models'; 'What construction costs, and how it composes' was split into '7. Cost, composition and scale', '8. Related concepts' and '10. Conclusion'), and '9. Limitations' and 'Reproducibility' were added. Removed 'rather than' (13 to 0), 'not X but Y' (3 to 0), 'this paper', 'merely', 'worth', 'a nonautonomous ordinary system wearing a costume', 'The rule is furniture', and the closing aphorism. The abstract was cut from about 440 to 261 words. One factual overstatement about the frozen games and one omission about the nature of the game oscillation were corrected (see audit)."
+  "notes": "Structured-evidence migration: inline bibliography converted to references.yaml (CSL) with Pandoc [@id] citations; claims.yaml ledger added; prose unchanged."
 }

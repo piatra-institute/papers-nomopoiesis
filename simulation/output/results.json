@@ -35,6 +35,8 @@
     "gain_genuine_k40": 4.533406,
     "gain_forced_k10": 0.001953,
     "gain_forced_k40": 0.0,
+    "gain_forced_k40_sci": 1.819e-12,
+    "separation_forced_k40_sci": 9.095e-13,
     "genuine_grows": true,
     "forced_decays": true
   },
